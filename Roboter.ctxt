@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Roboter
+comment0.text=\r\n\ Diese\ Klasse\ ist\ die\ Oberklasse\ fuer\ die\ Roboter\ "Robita",\ "Robson"\ und\ "Robby".\ \r\n\ Programme\ sollen\ nur\ in\ den\ Unterklassen\ \r\n\ implementiert\ werden,\ da\ diese\ Klasse\ fuer\ Java-Beginner\ sehr\ komplex\ ist.\r\n\ Ein\ Roboter\ kann\ sich\ felderweise\ in\ die\ vier\ Himmelsrichtungen\ im\ Szenario\ bewegen.\ \r\n\ Ueber\ Sensoren\ kann\ er\ Informationen\ ueber\ seine\ Umwelt\ erhalten.\r\n
+comment1.params=
+comment1.target=Roboter()
+comment1.text=\r\n\ Ein\ Objekt\ der\ Klasse\ Roboter\ wird\ exempliert\ bzw.\ instanziert.\r\n
+numComments=2

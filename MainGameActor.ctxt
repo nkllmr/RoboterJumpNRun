@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.target=MainGameActor
+comment0.text=\r\n\ acts\ as\ the\ main\ method\ of\ the\ programm\ that\ controlls\ the\ entire\ system.\r\n\ \r\n\ @K\u00FCllmer\ (your\ name)\ \r\n\ @27042025\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment10.params=movespeed
+comment10.target=boolean\ updatexFortschritt(int)
+comment2.params=
+comment2.target=void\ instantiation()
+comment3.params=
+comment3.target=void\ GameLoop()
+comment4.params=
+comment4.target=void\ GameGewonnen()
+comment5.params=score
+comment5.target=void\ GameOver(int)
+comment6.params=
+comment6.target=void\ draw()
+comment7.params=xposdiff
+comment7.target=int\ sollSpringen(boolean)
+comment8.params=
+comment8.target=int\ getDelta()
+comment9.params=
+comment9.target=long\ getTime()
+numComments=11

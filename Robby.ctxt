@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Robby
+comment0.text=\r\n\ Die\ Klasse\ Robby\ ist\ eine\ Unterklasse\ von\ Roboter.\r\n\ Sie\ erbt\ damit\ alle\ Attribute\ und\ Methoden\ der\ Klasse\ Roboter.\r\n
+comment1.params=h
+comment1.target=Robby(int)
+comment1.text=--\ Methoden\ --
+comment2.params=h
+comment2.target=void\ setHeight(int)
+comment3.params=
+comment3.target=int\ getx()
+comment4.params=
+comment4.target=int\ gety()
+comment5.params=shouldJump\ timeSinceLast\ lastWallHeight\ thisWallHeight
+comment5.target=boolean\ yMovement(int,\ int,\ int,\ int)
+numComments=6
