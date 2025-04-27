@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Robson
+comment0.text=\r\n\ Die\ Klasse\ Robson\ ist\ eine\ Unterklasse\ von\ Roboter.\r\n\ Sie\ erbt\ damit\ alle\ Attribute\ und\ Methoden\ der\ Klasse\ Roboter.\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ In\ der\ Methode\ "act"\ koennen\ Befehle\ /\ andere\ Methoden\ angewendet\ werden\:\r\n\ Die\ Methoden\ werden\ dort\ nacheinander\ "aufgerufen",\ wenn\ man\r\n\ nach\ dem\ Kompilieren\ /\ uebersetzen\ den\ Act-Knopf\ drueckt.\r\n
+numComments=2
