@@ -38,7 +38,8 @@ public class Robby extends Roboter
                     hohe-= ++yspeed;
                 }else {
                     yspeed = 0;
-                    hohe = thisWallHeight+1;
+                    if(thisWallHeight == 0) hohe = 0;
+                    else hohe = thisWallHeight+1;
                 }
             }
         }

@@ -32,13 +32,21 @@ public class MainGameActor extends Actor
     World W;
     GreenfootSound bg_music;
     int MOVE_IN_X_MS = 500; 
-    public void act() // aka main()
+    boolean hasWon = false;
+    boolean sollUpdaten = true;
+    public int getOverallLength(){
+        int len = 0;
+        for (int i = 0; i < Wande.length; i++){
+            len += Wande[i].length-2;
+        }
+        return len;
+    }
+    public boolean hasWon(){
+        return hasWon;
+    }
+    public void act(int lvl) // aka main()
     {
-        int input;
-        do {
-            input = Integer.parseInt(Greenfoot.ask("Welches LEVEL wollen Sie spielen? [1,2,3]"));
-        } while (input != 1 && input != 2 && input != 3);
-        curLevel = input-1;
+        curLevel = lvl;
         instantiation();
         GameLoop();
     }
@@ -79,11 +87,18 @@ public class MainGameActor extends Actor
                         }
                     }
                     Player.setHeight(Wande[curLevel][xFortschritt]+1);
+                    W.showText("3 .. 2 .. 1 ..", 6,4);
+                    draw();
+                    long Time = System.currentTimeMillis();
+                    while(System.currentTimeMillis()-Time <= 2000);
+                    W.showText("",6,4);
+                    lastMOVE = getTime();
                 }
             }
             draw(); /** Wändebewegen() entfällt dadurch, dass man sie in der Draw abhängig von x-Fortschritt zeichnet**/
         }
         if (xFortschritt >= ZielXWert){
+            maxScore = xFortschritt;
             GameGewonnen();
         }
     }
@@ -93,8 +108,10 @@ public class MainGameActor extends Actor
         W.removeObjects(W.getObjects(null));
         W.showText("Gewonnen!", W.getHeight()/4*3, W.getHeight()/2);        
         W.repaint();
+        hasWon = true;
     }
     public void GameOver(int score){
+        maxScore = score;
         bg_music.stop();
         Greenfoot.playSound("game-over.wav");
         W.removeObjects(W.getObjects(null));
@@ -106,7 +123,7 @@ public class MainGameActor extends Actor
         W.removeObjects(W.getObjects(null));
         W.showText("", W.getHeight()/4*3, W.getHeight()/2);
         //Score
-        W.showText("Score: "+maxScore, W.getHeight()+2, 0);
+        W.showText("Level " + (curLevel+1) + "  Score: "+maxScore, W.getHeight()+1, 0);
         //Lebensanzeige
         W.showText("Leben: "+Player.SpielerLeben.getLeben(), 1,0);
         //Spieler
@@ -118,6 +135,9 @@ public class MainGameActor extends Actor
             W.addObject(new Wand(),i,W.getHeight()-Wande[curLevel][i+xFortschritt]);
         }
         W.repaint();
+    }
+    public int getMaxScore(){
+        return maxScore;
     }
     public int sollSpringen(boolean xposdiff){ 
         /** returns: 
